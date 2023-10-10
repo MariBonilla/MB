@@ -1,34 +1,390 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+    <link rel="stylesheet" href="/Users/bonillamarissa/Documents/P.V/Home.html">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./nav.css"/>
-    <title>Games</title>
+
     <style>
-        body{
-            background-color: black;
+        body {
+            /* Background image */
+
+           
+            background-image: url('3.jpg');
+            /* Background */
+            background-size: cover;
+            /* Image will cover the entire viewport with the background image */
+            background-position: center;
+            background-attachment: fixed;
+            /* To full image */
+            color: #ffffff;
+            font-family: monospace;
+            /* Title */
+            color: #ffffff;
+            /* color title */
+            font-family: monospace;
+
+           
+
+
+
         }
+
+        /*  Navigation Bar */
+        .topnav {
+            font-family: 'Aldhabi', serif;
+            font-weight: bold;
+            font-size: 50px;
+            font-size: large;
+            overflow: hidden;
+            /* Create navigation bar transparent */
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            height: 60px;
+            /* Make navigation top left */
+            position: absolute;
+            top: 8px;
+            left: 16px;
+            font-size: 18px;
+        }
+
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        /* Font when mouse is over navgiation bar */
+        .logo {
+            max-height: 150%;
+            /* logo height inside navigation bar's */
+            margin-left: 10px;
+            /* Adjust the position of logo */
+        }
+
+        /* Font when mouse is over navgiation bar */
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        /* Font click on navgiation bar */
+        .topnav a.active {
+            background-color: #00BDFF;
+            color: white;
+        }
+
+        /* Navgiation bar */
+        nav {
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .hero {
+           
+            color:rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            height: 90vh; /* Ensure the hero section takes up the full viewport height */
+             }
+
+        /* Game Room - Font */
+        .hero h1 {
+            /* Adjust title */
+            font-size: 70px;
+           
+            /* Neon Glow Font */
+            position: relative;
+            text-decoration: none;
+            font-weight: bold;
+            color: #ffffff; /* Font color */
+            /* Neon Glow */
+            text-shadow: 0 0 5px #000000, 0 0 10px #000000,
+                0 0 15px #00BDFF, 0 0 20px #00BDFF,
+                0 0 25px #00BDFF, 0 0 30px #00BDFF, 0 0 35px #000000;
+        }
+
+        /* Play it, love it or Beat it - Font */
+        .hero p {
+            font-size: 20px;
+            margin-top: 0;
+            align-items: center;
+            
+        }
+
+             /* Background Text Box BODY */
+        .imagebox {
+            
+            margin-top: -200px;
+
+            padding-top: 70px;
+            margin-left: center;
+          
+            
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            font-family: 'Monospace';
+            display: flex; /* Add this line */
+            justify-content: flex-end; /* Align items to the right */
+            align-items: center;
+        }
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+        .container {
+            
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: auto; /* Remove fixed height */
+            
+        }
+
+        .box {
+            
+            width: 200px;
+            padding: 20px;
+            margin: 20px;
+            margin-right: 150px;
+   
+            padding-bottom: 30px;
+           
+
+
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            color: #cabad6;
+        }
+
+
+
+
+
+
+
+        .boxx {
+            break-inside: 10px;
+            width: 505px;
+            padding: 50px;
+            padding-right: 60px;
+            margin: 50px;
+            margin-right: 70px;
+        
+
+
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+        }
+
+
+
+
+
+
+
+
+
+
+        .box img {
+           
+            max-width: 100%;
+            display: block;
+            margin: 0 auto; /* Center the image horizontally */
+            
+        }
+
+      
+          /* large image on left */
+        .left-image {
+            
+            max-width: 900px; /* Adjust the width as needed */
+            height: 300px;
+           
+        }
+
+
+          /* Space at the end of game */
+          .endgame {
+            margin-bottom: 100px;
+        }
+
     </style>
 </head>
+
 <body>
-    <header>
-        <!-- <img class=".sign-up-card-logo" src="./venom logo.png" alt="logo"/> -->
-        <div class="topnav">
-            <img  class=" topnav_logo"src="./venom logo.png" alt="venom logo">
-           <ul>
-            <li> <a href="./Home.html">Home</a></li>
-            <li> <a href="./Account.html">Account</a></li>
-            <li> <a href="./Games.html">Games</a></li>
-            <li> <a href="#">About us</a></li>
-           </ul>
-           <div class="login_signup">
-            <ul>
-                <li> <a id="sign-up" href="./SignUp.html">Sign up</a></li>
-                <li> <a id="login"  href="./Login.html">Login</a></li>
-            </ul>
+    <!-- Navigation Bar -->
+    <div class="topnav">
+        <!-- Your navigation links here -->
+    </div>
+    <!-- Links to ALL Pages -->
+    <div class="topnav">
+        <img class="logo" src="m.png" alt="logo" />
+        <a href="/Users/bonillamarissa/Documents/P.V/Home.html">Home</a>
+        <a href="/Users/bonillamarissa/Documents/P.V/Login.html">Login</a>
+        <a href="/Users/bonillamarissa/Documents/P.V/SignUp.html">Sign Up</a>
+        <a class="active" href="/Users/bonillamarissa/Documents/P.V/Games.html">Games</a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Title -->
+    <div class="hero">
+        <!-- Box for Play it, Love it or Beat it -->
+
+            
+            <h1>Game Portal</h1>
+            <p>Love it, Play it or Beat it</p>
         </div>
+    </div>
+
+
+
+
+    <!-- First Row -->
+    <div class="imagebox">
+
+   
+        <!-- TiKTackToe Game -->
+        <a href="/Users/bonillamarissa/Documents/P.V/oblue.jpg">
+            <div class="boxx">
+        
+
+        <img src="Ti.jpg" alt="Large Image" class="left-image">
+        <h2>Tic-Tac-Toe</h2>
+      
+
+
+
+
+        
+    </div>
+
+
+
+         <!-- TiKTackToe comments -->
+         <div class="boxx">
+            <h2> Play the classic Tic-Tac-Toe game for free online with one or two players. </h2>
+
+           <br> </br>
+
+            <h3>    How can I win at Tic-Tac-Toe?  </h3>
+            <p>
+To beat the computer (or at least tie), you need to make use of a little bit of strategy. Strategy means figuring out what you need to do to win.
+Part of your strategy is trying to figure out how to get three X s in a row. The other part is trying to figure out how to stop the computer from getting three O s in a row.
+After you put an X in a square, you start looking ahead. Where's the best place for your next X ? You look at the empty squares and decide which ones are good choices which ones might let you make three X s in a row.
+You also have to watch where the computer puts its O . That could change what you do next. If the computer gets two O s in a row, you have to put your next X in the last empty square in that row, or the computer will win. You are forced to play in a particular square or lose the game.
+If you always pay attention and look ahead, you'll never lose a game of Tic-Tac-Toe. You may not win, but at least you'll tie.
+
+ 
+            </p>
+           
+            </div>
+    
+
+
+
+</a>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- Game 1 -->
+            <!-- Link The card Game 1 HERE -->
+            <a href="/Users/bonillamarissa/Documents/P.V/oblue.jpg">
+                <div class="box">
+                    <img src="/Users/bonillamarissa/Documents/P.V/Game1.jpg" alt="Image 1">
+                    <h3> Crazy Eights</h3>
+
+                    <p>"Play the classic card game of Hearts online for free, against the computer or with friends from around the world, and test your skills in this strategic." </p>
+                </div>
+            </a>
+
+
+
+
         </div>
-    </header>
+    </div>
+
+
+
+    
+    <!-- Second Row -->
+    <div class="imagebox">
+        <div class="container">
+
+
+            <!-- Game 2 -->
+            <!-- Link The card Game 2 HERE -->
+            <a href="/Users/bonillamarissa/Documents/P.V/lb.jpg">
+                <div class="box">
+                    <img src="/Users/bonillamarissa/Documents/P.V/Game2.jpeg" alt="Image 2">
+
+                    <h3> Texas Hold'em </h3>
+                    <p> Join one of the world's most popular online free poker games with more tables, more tournaments, more jackpots, and more players to challenge than ever before! 
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+                
+
+    
+
+
+    <!-- Space for footheader -->
+    <div class="endgame"></div>
 </body>
+
 </html>
